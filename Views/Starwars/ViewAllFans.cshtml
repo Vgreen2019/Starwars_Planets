@@ -1,0 +1,46 @@
+﻿@using StarWarsApp
+@using StarWarsApp.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model StarWarsApp.Models.FansViewModel
+
+@{
+    ViewData["Title"] = "ViewAllFans";
+
+    
+}
+
+<h1>View All Fans</h1>
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Fan Name</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fan in Model.Fans)
+            {
+                <tr>
+
+                    <td>
+                        <a asp-controller="Starwars" asp-action="ViewAllFanFave" asp-route-FanId="@fan.FanId">@fan.FanName </a> <a asp-controller="Starwars" asp-action="ChooseFavoritePlanet" asp-route-FanId="@fan.FanId"> <button>Add Favorite Planet</button> </a>
+
+
+
+
+</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
+

@@ -1,0 +1,32 @@
+﻿@model FanFavViewModel
+
+@{
+    ViewData["Title"] = "DeleteFavorite";
+}
+
+<h1>@Model.FanName's Favorite Planets</h1>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Planet URL</th>                               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var favPlanet in Model.FavPlanets)
+            {
+                <tr>
+
+                    <td>
+                        @favPlanet.PlanetUrl <a asp-controller="Starwars" asp-action="ViewAllFanFave" asp-route-url="@favPlanet.PlanetUrl"> <button>Delete</button> </a>
+
+                    </td>
+                </tr>
+             }
+        </tbody>
+    </table>
+    
+</div>
+
+

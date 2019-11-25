@@ -1,0 +1,87 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model StarWarsApp.Models.PlanetViewModel
+
+@{
+    ViewData["Title"] = "ViewPlanet";
+}
+
+<h1>
+    @Html.DisplayFor(model => model.Name)
+</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Climate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Climate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Diameter)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Diameter)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Edited)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Edited)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gravity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gravity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orbital_Period)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orbital_Period)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Population)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Population)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rotation_Period)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rotation_Period)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Surface_Water)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Surface_Water)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Terrain)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Terrain)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+    </dl>
+
+
+    <a asp-controller="Starwars" asp-action="ChooseFavoritePlanet" > <button>OK</button> </a>
+
+</div>
+

@@ -1,0 +1,43 @@
+﻿
+@model StarWarsApp.Models.PlanetsViewModel
+
+@{
+    ViewData["Title"] = "ChooseFavoritePlanet";
+
+    
+}
+
+<h1>Choose Your Favorite Planet</h1>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Planet Name</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var planet in Model.Planets)
+            {
+
+                <tr>
+
+                    <td>
+                        @planet.Name <a asp-controller="Starwars" asp-action="AddToFavorites" asp-route-url="@planet.Url" > <button>Add To Favorites</button> </a>
+
+
+                        
+
+                    </td>
+                    
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>
+

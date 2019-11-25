@@ -1,0 +1,41 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model StarWarsApp.Models.PlanetsViewModel
+
+@{
+    ViewData["Title"] = "ViewAllPlanets";
+}
+
+<h1>View All Planets</h1>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Planet Name</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var planet in Model.Planets)
+            {
+                <tr>
+
+                    <td>
+                        
+                        <a asp-controller="Starwars" asp-action="ViewPlanet" asp-route-url="@planet.Url">@planet.Name</a>
+
+
+
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
+
